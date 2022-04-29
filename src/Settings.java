@@ -69,7 +69,10 @@ public class Settings {
 
     public void saveToBinaryFile(String filename) throws IOException {
         FileOutputStream binaryFile = new FileOutputStream(new File(filename));
-        binaryFile.write(this.toString().getBytes());
+        BufferedOutputStream binaryWriter = new BufferedOutputStream(binaryFile);
+        
+        binaryWriter.write(this.toString().getBytes());
+        binaryWriter.flush();
         binaryFile.close();
     }
 }
