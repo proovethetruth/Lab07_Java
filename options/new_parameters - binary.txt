@@ -1,0 +1,6 @@
+isReal 0
+kills 10
+numOfPeople 223
+Brightness 80
+Blur 20
+isNothing 1
